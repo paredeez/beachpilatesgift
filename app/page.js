@@ -79,7 +79,7 @@ export default function Home() {
         {/* Header - only visible in hero */}
         <header className="absolute top-0 left-0 right-0 z-50 bg-sage shadow-md">
           <div className="max-w-7xl mx-auto px-4 py-2 md:py-3 flex items-center justify-center">
-            <div className="relative w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden drop-shadow-lg">
+            <div className="relative w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden">
               <Image
                 src="/images/newlogo.png"
                 alt="Beach Pilates Melbourne"
@@ -200,7 +200,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-sage py-12">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <div className="mb-6 relative w-32 h-32 mx-auto rounded-full overflow-hidden drop-shadow-2xl">
+          <div className="mb-6 relative w-32 h-32 mx-auto rounded-full overflow-hidden">
             <Image
               src="/images/newlogo.png"
               alt="Beach Pilates Melbourne"
