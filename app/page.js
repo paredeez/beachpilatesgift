@@ -164,7 +164,7 @@ export default function Home() {
                   src={voucher.image}
                   alt={`${voucher.title} voucher`}
                   fill
-                  className="object-cover"
+                  className="object-contain object-top"
                   style={{ display: 'block', margin: 0, padding: 0, verticalAlign: 'bottom' }}
                   priority
                 />
