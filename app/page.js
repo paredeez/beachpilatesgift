@@ -165,7 +165,7 @@ export default function Home() {
       </div>
 
       {/* Vouchers Grid */}
-      <div id="vouchers" className="bg-sage-dark py-16">
+      <div id="vouchers" className="bg-sage-dark py-16 pb-32 md:pb-40">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-light text-center mb-4 text-white">
             Choose Your Package
