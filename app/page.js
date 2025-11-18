@@ -91,9 +91,9 @@ export default function Home() {
         </header>
 
         {/* Content */}
-        <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 pt-8">
+        <div className="relative z-10 h-full flex flex-col items-center justify-center px-4">
           {/* Carousel Images */}
-          <div className="relative w-full max-w-md h-56 md:h-72 mb-4">
+          <div className="relative w-full h-64 md:h-80 mb-4 md:mb-6">
             {heroImages.map((image, index) => (
               <div
                 key={image}
@@ -114,23 +114,23 @@ export default function Home() {
             ))}
           </div>
 
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-light text-center mb-2 md:mb-3 text-gray-800">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-center mb-3 md:mb-4 text-gray-800">
             Beach Pilates Gift Vouchers
           </h1>
-          <p className="text-sm md:text-lg lg:text-xl text-gray-700 text-center max-w-2xl mb-2 md:mb-3 px-4">
+          <p className="text-base md:text-lg lg:text-xl text-gray-700 text-center max-w-2xl mb-3 md:mb-4 px-2">
             Give the gift of wellness and movement by the beach
           </p>
-          <p className="text-xs md:text-sm text-gray-600 text-center max-w-xl mb-4 md:mb-6 px-4">
+          <p className="text-sm md:text-base text-gray-600 text-center max-w-xl mb-6 md:mb-8 px-2">
             Perfect for friends, family, or yourself. Choose from single classes to multi-class packages.
           </p>
           <button
             onClick={scrollToVouchers}
-            className="group flex flex-col items-center gap-1 text-gray-700 hover:text-gray-900 transition-colors"
+            className="group flex flex-col items-center gap-1 md:gap-2 text-gray-700 hover:text-gray-900 transition-colors"
             aria-label="Scroll to vouchers"
           >
-            <span className="text-sm md:text-base font-medium">View Vouchers</span>
+            <span className="text-base md:text-lg font-medium">View Vouchers</span>
             <svg
-              className="w-5 h-5 md:w-6 md:h-6 animate-bounce"
+              className="w-6 h-6 md:w-8 md:h-8 animate-bounce"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
