@@ -14,43 +14,43 @@ const vouchers = [
     id: 1,
     title: 'One Class',
     price: '$15',
-    image: '/images/giftvouchers/2.png',
+    image: '/images/giftvouchers/cropvoucherhead.png',
     url: 'https://buy.stripe.com/14A14n45k6WVbe91hM9AA03',
   },
   {
     id: 2,
     title: '2 Classes',
     price: '$30',
-    image: '/images/giftvouchers/2.png',
-    url: 'https://buy.stripe.com/14A14n45k6WVbe91hM9AA03',
+    image: '/images/giftvouchers/cropvoucherhead.png',
+    url: 'https://buy.stripe.com/6oUaEXatI3KJfupgcG9AA04',
   },
   {
     id: 3,
     title: '4 Classes',
     price: '$60',
-    image: '/images/giftvouchers/2.png',
-    url: 'https://buy.stripe.com/14A14n45k6WVbe91hM9AA03',
+    image: '/images/giftvouchers/cropvoucherhead.png',
+    url: 'https://buy.stripe.com/4gM6oH1Xc3KJbe9d0u9AA05',
   },
   {
     id: 4,
     title: '6 Classes',
     price: '$90',
-    image: '/images/giftvouchers/2.png',
-    url: 'https://buy.stripe.com/14A14n45k6WVbe91hM9AA03',
+    image: '/images/giftvouchers/cropvoucherhead.png',
+    url: 'https://buy.stripe.com/9B65kDgS6epndmh3pU9AA06',
   },
   {
     id: 5,
     title: '8 Classes',
     price: '$120',
-    image: '/images/giftvouchers/2.png',
-    url: 'https://buy.stripe.com/14A14n45k6WVbe91hM9AA03',
+    image: '/images/giftvouchers/cropvoucherhead.png',
+    url: 'https://buy.stripe.com/3cI8wPfO20yx6XTf8C9AA07',
   },
   {
     id: 6,
     title: '20 Classes',
     price: '$300',
-    image: '/images/giftvouchers/2.png',
-    url: 'https://buy.stripe.com/14A14n45k6WVbe91hM9AA03',
+    image: '/images/giftvouchers/cropvoucherhead.png',
+    url: 'https://buy.stripe.com/fZu3cv0T82GF9619Oi9AA08',
   },
 ];
 
@@ -154,32 +154,27 @@ export default function Home() {
           </h2>
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {vouchers.map((voucher) => (
-            <div
+            <a
               key={voucher.id}
-              className="relative bg-white rounded-xl md:rounded-2xl shadow-lg overflow-visible transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              href={voucher.url}
+              className="relative rounded-xl md:rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer flex flex-col"
             >
-              <div className="relative h-56 md:h-80 rounded-xl md:rounded-2xl overflow-hidden">
+              <div className="relative h-24 md:h-32 overflow-hidden flex-shrink-0" style={{ lineHeight: 0, margin: 0, padding: 0, display: 'block' }}>
                 <Image
                   src={voucher.image}
                   alt={`${voucher.title} voucher`}
                   fill
-                  className="object-cover object-top"
+                  className="object-cover"
+                  style={{ display: 'block', margin: 0, padding: 0, verticalAlign: 'bottom' }}
+                  priority
                 />
               </div>
 
-              <div className="absolute bottom-0 left-0 right-0 bg-white p-3 md:p-6 rounded-b-xl md:rounded-b-2xl">
-                <div className="text-center mb-2 md:mb-4">
-                  <p className="text-xs md:text-lg text-gray-700 mb-1 md:mb-2">{voucher.title}</p>
-                  <p className="text-2xl md:text-4xl font-semibold text-gray-800">{voucher.price}</p>
-                </div>
-                <a
-                  href={voucher.url}
-                  className="block w-full bg-sage hover:bg-sage-dark text-gray-800 py-2 md:py-3 rounded-full font-medium transition-colors duration-300 text-center text-sm md:text-base"
-                >
-                  Purchase
-                </a>
+              <div className="bg-white p-3 md:p-4 flex items-center justify-between" style={{ margin: 0, padding: '0.75rem' }}>
+                <p className="text-sm md:text-lg text-gray-700 font-medium">{voucher.title}</p>
+                <p className="text-xl md:text-3xl font-semibold text-gray-800">{voucher.price}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
         </div>
