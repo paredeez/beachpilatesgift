@@ -152,25 +152,25 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-light text-center mb-12 text-white">
             Choose Your Package
           </h2>
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+        <div className="grid grid-cols-2 gap-4 md:gap-8">
           {vouchers.map((voucher) => (
             <a
               key={voucher.id}
               href={voucher.url}
               className="relative rounded-xl md:rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer flex flex-col"
             >
-              <div className="relative h-24 md:h-32 overflow-hidden flex-shrink-0" style={{ lineHeight: 0, margin: 0, padding: 0, display: 'block' }}>
+              <div className="relative h-28 md:h-40 overflow-hidden flex-shrink-0 w-full" style={{ lineHeight: 0, margin: 0, padding: 0, display: 'block' }}>
                 <Image
                   src={voucher.image}
                   alt={`${voucher.title} voucher`}
                   fill
-                  className="object-contain object-top"
+                  className="object-contain object-bottom"
                   style={{ display: 'block', margin: 0, padding: 0, verticalAlign: 'bottom' }}
                   priority
                 />
               </div>
 
-              <div className="bg-white p-3 md:p-4 flex items-center justify-between" style={{ margin: 0, padding: '0.75rem' }}>
+              <div className="bg-white p-3 md:p-4 flex flex-col items-center justify-center w-full" style={{ margin: 0, padding: '0.75rem' }}>
                 <p className="text-sm md:text-lg text-gray-700 font-medium">{voucher.title}</p>
                 <p className="text-xl md:text-3xl font-semibold text-gray-800">{voucher.price}</p>
               </div>
