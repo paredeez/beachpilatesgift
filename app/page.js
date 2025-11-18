@@ -129,8 +129,8 @@ export default function Home() {
             ))}
           </div>
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-3 md:mb-4 text-gray-800 font-[family-name:var(--font-playfair)]">
-            Beach Pilates Melbourne Gift Vouchers
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-3 md:mb-4 text-gray-800 font-[family-name:var(--font-playfair)] leading-tight">
+            Beach Pilates Melbourne<br />Gift Vouchers
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-gray-700 text-center max-w-2xl mb-3 md:mb-4 px-2">
             Give the gift of wellness and movement by the beach
