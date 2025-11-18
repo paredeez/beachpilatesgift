@@ -12,44 +12,32 @@ const heroImages = [
 const vouchers = [
   {
     id: 1,
-    title: 'One Class',
-    price: '$15',
-    image: '/images/giftvouchers/cropvoucherhead.png',
+    image: '/images/giftvouchers/1.png',
     url: 'https://buy.stripe.com/14A14n45k6WVbe91hM9AA03',
   },
   {
     id: 2,
-    title: '2 Classes',
-    price: '$30',
-    image: '/images/giftvouchers/cropvoucherhead.png',
+    image: '/images/giftvouchers/2.png',
     url: 'https://buy.stripe.com/6oUaEXatI3KJfupgcG9AA04',
   },
   {
     id: 3,
-    title: '4 Classes',
-    price: '$60',
-    image: '/images/giftvouchers/cropvoucherhead.png',
+    image: '/images/giftvouchers/3.png',
     url: 'https://buy.stripe.com/4gM6oH1Xc3KJbe9d0u9AA05',
   },
   {
     id: 4,
-    title: '6 Classes',
-    price: '$90',
-    image: '/images/giftvouchers/cropvoucherhead.png',
+    image: '/images/giftvouchers/4.png',
     url: 'https://buy.stripe.com/9B65kDgS6epndmh3pU9AA06',
   },
   {
     id: 5,
-    title: '8 Classes',
-    price: '$120',
-    image: '/images/giftvouchers/cropvoucherhead.png',
+    image: '/images/giftvouchers/5.png',
     url: 'https://buy.stripe.com/3cI8wPfO20yx6XTf8C9AA07',
   },
   {
     id: 6,
-    title: '20 Classes',
-    price: '$300',
-    image: '/images/giftvouchers/cropvoucherhead.png',
+    image: '/images/giftvouchers/6.png',
     url: 'https://buy.stripe.com/fZu3cv0T82GF9619Oi9AA08',
   },
 ];
@@ -78,7 +66,7 @@ export default function Home() {
       <div className="relative h-screen overflow-hidden bg-sand">
         {/* Header - only visible in hero */}
         <header className="absolute top-0 left-0 right-0 z-50 bg-sage shadow-md">
-          <div className="max-w-7xl mx-auto px-4 py-2 md:py-3 flex items-center justify-center">
+          <div className="max-w-7xl mx-auto px-4 py-2 md:py-3 flex items-center justify-start">
             <div className="relative w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden">
               <Image
                 src="/images/newlogo.png"
@@ -157,23 +145,16 @@ export default function Home() {
             <a
               key={voucher.id}
               href={voucher.url}
-              className="relative rounded-xl md:rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer flex flex-col"
+              className="relative shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer block rounded-xl md:rounded-2xl overflow-hidden"
             >
-              <div className="relative h-28 md:h-40 overflow-hidden flex-shrink-0 w-full" style={{ lineHeight: 0, margin: 0, padding: 0, display: 'block' }}>
-                <Image
-                  src={voucher.image}
-                  alt={`${voucher.title} voucher`}
-                  fill
-                  className="object-contain object-bottom"
-                  style={{ display: 'block', margin: 0, padding: 0, verticalAlign: 'bottom' }}
-                  priority
-                />
-              </div>
-
-              <div className="bg-white p-3 md:p-4 flex flex-col items-center justify-center w-full" style={{ margin: 0, padding: '0.75rem' }}>
-                <p className="text-sm md:text-lg text-gray-700 font-medium">{voucher.title}</p>
-                <p className="text-xl md:text-3xl font-semibold text-gray-800">{voucher.price}</p>
-              </div>
+              <Image
+                src={voucher.image}
+                alt={`Gift voucher ${voucher.id}`}
+                width={800}
+                height={1067}
+                className="w-full h-auto"
+                priority
+              />
             </a>
           ))}
         </div>
