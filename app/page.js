@@ -179,7 +179,7 @@ export default function Home() {
               key={voucher.id}
               href={voucher.url}
               className={`relative shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer block rounded-xl md:rounded-2xl overflow-hidden ${
-                vouchersVisible ? 'animate-bounce-in' : 'opacity-0'
+                vouchersVisible ? 'animate-bounce-in' : ''
               }`}
               style={{
                 animationDelay: vouchersVisible ? `${index * 100}ms` : '0ms'
