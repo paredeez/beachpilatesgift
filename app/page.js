@@ -62,37 +62,29 @@ export default function Home() {
         <div className="min-h-screen flex items-center justify-center py-8 md:py-0">
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 max-w-5xl mx-auto px-4">
             {/* Left Side - Images */}
-            <div className="flex flex-row md:flex-col justify-center gap-3 md:gap-4 flex-wrap max-w-[280px] md:max-w-none">
-              <div className="relative w-[60px] h-[60px] md:w-[140px] md:h-[140px]">
+            <div className="flex flex-row md:flex-col justify-center gap-4 md:gap-6 flex-wrap max-w-[280px] md:max-w-none">
+              <div className="relative w-[70px] h-[70px] md:w-[140px] md:h-[140px]">
                 <Image
-                  src="/images/waterimages/IMG_3684.jpeg"
+                  src="/images/updatedicons/1.png"
                   alt="Dolphin"
                   fill
-                  className="object-contain scale-150"
+                  className="object-contain"
                 />
               </div>
-              <div className="relative w-[60px] h-[60px] md:w-[140px] md:h-[140px]">
+              <div className="relative w-[70px] h-[70px] md:w-[140px] md:h-[140px]">
                 <Image
-                  src="/images/waterimages/IMG_3686.jpeg"
+                  src="/images/updatedicons/2.png"
+                  alt="Wave"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="relative w-[70px] h-[70px] md:w-[140px] md:h-[140px]">
+                <Image
+                  src="/images/updatedicons/3.png"
                   alt="Shell"
                   fill
                   className="object-contain"
-                />
-              </div>
-              <div className="relative w-[60px] h-[60px] md:w-[140px] md:h-[140px]">
-                <Image
-                  src="/images/waterimages/IMG_3685.jpeg"
-                  alt="Waves"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <div className="relative w-[60px] h-[60px] md:w-[140px] md:h-[140px]">
-                <Image
-                  src="/images/waterimages/IMG_3684.jpeg"
-                  alt="Dolphin"
-                  fill
-                  className="object-contain scale-150"
                 />
               </div>
             </div>
