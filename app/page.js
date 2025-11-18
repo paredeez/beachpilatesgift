@@ -66,7 +66,7 @@ export default function Home() {
       <div className="relative h-screen overflow-hidden bg-sand">
         {/* Header - only visible in hero */}
         <header className="absolute top-0 left-0 right-0 z-50 bg-sage shadow-md">
-          <div className="max-w-7xl mx-auto px-4 py-2 md:py-3 flex items-center justify-start">
+          <div className="max-w-7xl mx-auto px-4 py-2 md:py-3 flex items-center justify-center">
             <div className="relative w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden">
               <Image
                 src="/images/newlogo.png"
@@ -86,8 +86,13 @@ export default function Home() {
               <div
                 key={image}
                 className={`absolute inset-0 transition-opacity duration-1000 flex items-center justify-center ${
-                  index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                  index === currentImageIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
                 }`}
+                style={{ 
+                  willChange: 'opacity',
+                  transform: 'translateZ(0)',
+                  backfaceVisibility: 'hidden'
+                }}
               >
                 <div className="relative w-full h-full">
                   <Image
@@ -95,7 +100,8 @@ export default function Home() {
                     alt="Beach illustration"
                     fill
                     className="object-contain"
-                    priority={index === 0}
+                    priority
+                    loading="eager"
                   />
                 </div>
               </div>
