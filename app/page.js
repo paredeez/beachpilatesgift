@@ -147,51 +147,39 @@ export default function Home() {
       </div>
 
       {/* Vouchers Grid */}
-      <div id="vouchers" className="relative bg-white py-16 overflow-hidden">
-        {/* Ocean Background */}
-        <div className="absolute inset-0 opacity-20">
-          <Image
-            src="/images/waterimages/IMG_4024.jpeg"
-            alt=""
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="absolute inset-0 bg-white/40" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-light text-center mb-12 text-gray-800">
+      <div id="vouchers" className="bg-sage-dark py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-light text-center mb-12 text-white">
             Choose Your Package
           </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {vouchers.map((voucher) => (
-            <a
+            <div
               key={voucher.id}
-              href={voucher.url}
-              className="group relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              className="bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
-              <div className="relative h-80">
+              <div className="relative h-40 md:h-56">
                 <Image
                   src={voucher.image}
                   alt={`${voucher.title} voucher`}
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
 
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-white via-white to-transparent">
-                <div className="flex items-end justify-between">
-                  <div>
-                    <p className="text-sm text-gray-600 mb-1">{voucher.title}</p>
-                    <p className="text-3xl font-light text-gray-800">{voucher.price}</p>
-                  </div>
-                  <button className="bg-sage group-hover:bg-sage-dark text-gray-800 px-6 py-3 rounded-full font-medium transition-colors duration-300">
-                    Purchase
-                  </button>
+              <div className="bg-white p-3 md:p-6">
+                <div className="text-center mb-2 md:mb-4">
+                  <p className="text-xs md:text-lg text-gray-700 mb-1 md:mb-2">{voucher.title}</p>
+                  <p className="text-2xl md:text-4xl font-semibold text-gray-800">{voucher.price}</p>
                 </div>
+                <a
+                  href={voucher.url}
+                  className="block w-full bg-sage hover:bg-sage-dark text-gray-800 py-2 md:py-3 rounded-full font-medium transition-colors duration-300 text-center text-sm md:text-base"
+                >
+                  Purchase
+                </a>
               </div>
-            </a>
+            </div>
           ))}
         </div>
         </div>

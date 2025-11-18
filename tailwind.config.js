@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         sage: '#D4E4D0',
-        'sage-dark': '#A8C5A3',
+        'sage-dark': '#8BA888',
         sand: '#F5F0E8',
       },
     },
