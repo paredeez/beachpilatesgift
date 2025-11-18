@@ -21,36 +21,36 @@ const vouchers = [
     id: 2,
     title: '2 Classes',
     price: '$30',
-    image: '/images/giftvouchers/3.png',
-    url: 'https://buy.stripe.com/6oUaEXatI3KJfupgcG9AA04',
+    image: '/images/giftvouchers/2.png',
+    url: 'https://buy.stripe.com/14A14n45k6WVbe91hM9AA03',
   },
   {
     id: 3,
     title: '4 Classes',
     price: '$60',
-    image: '/images/giftvouchers/4.png',
-    url: 'https://buy.stripe.com/4gM6oH1Xc3KJbe9d0u9AA05',
+    image: '/images/giftvouchers/2.png',
+    url: 'https://buy.stripe.com/14A14n45k6WVbe91hM9AA03',
   },
   {
     id: 4,
     title: '6 Classes',
     price: '$90',
-    image: '/images/giftvouchers/5.png',
-    url: 'https://buy.stripe.com/9B65kDgS6epndmh3pU9AA06',
+    image: '/images/giftvouchers/2.png',
+    url: 'https://buy.stripe.com/14A14n45k6WVbe91hM9AA03',
   },
   {
     id: 5,
     title: '8 Classes',
     price: '$120',
-    image: '/images/giftvouchers/6.png',
-    url: 'https://buy.stripe.com/3cI8wPfO20yx6XTf8C9AA07',
+    image: '/images/giftvouchers/2.png',
+    url: 'https://buy.stripe.com/14A14n45k6WVbe91hM9AA03',
   },
   {
     id: 6,
     title: '20 Classes',
     price: '$300',
-    image: '/images/giftvouchers/7.png',
-    url: 'https://buy.stripe.com/fZu3cv0T82GF9619Oi9AA08',
+    image: '/images/giftvouchers/2.png',
+    url: 'https://buy.stripe.com/14A14n45k6WVbe91hM9AA03',
   },
 ];
 
@@ -156,18 +156,18 @@ export default function Home() {
           {vouchers.map((voucher) => (
             <div
               key={voucher.id}
-              className="bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              className="relative bg-white rounded-xl md:rounded-2xl shadow-lg overflow-visible transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
-              <div className="relative h-40 md:h-56">
+              <div className="relative h-56 md:h-80 rounded-xl md:rounded-2xl overflow-hidden">
                 <Image
                   src={voucher.image}
                   alt={`${voucher.title} voucher`}
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
 
-              <div className="bg-white p-3 md:p-6">
+              <div className="absolute bottom-0 left-0 right-0 bg-white p-3 md:p-6 rounded-b-xl md:rounded-b-2xl">
                 <div className="text-center mb-2 md:mb-4">
                   <p className="text-xs md:text-lg text-gray-700 mb-1 md:mb-2">{voucher.title}</p>
                   <p className="text-2xl md:text-4xl font-semibold text-gray-800">{voucher.price}</p>
@@ -186,17 +186,17 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-sage py-12">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <div className="mb-6 relative w-32 h-32 mx-auto rounded-full overflow-hidden">
+      <footer className="bg-sand py-4">
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-start gap-4">
+          <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
             <Image
               src="/images/newlogo.png"
               alt="Beach Pilates Melbourne"
               fill
-              className="object-cover opacity-80 scale-110"
+              className="object-cover scale-110"
             />
           </div>
-          <p className="text-gray-700">
+          <p className="text-gray-700 text-sm">
             © 2025 Beach Pilates Melbourne. All rights reserved.
           </p>
         </div>
