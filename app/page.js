@@ -44,6 +44,7 @@ const vouchers = [
 
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [vouchersVisible, setVouchersVisible] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -52,6 +53,26 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !vouchersVisible) {
+            setVouchersVisible(true);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const vouchersSection = document.getElementById('vouchers');
+    if (vouchersSection) {
+      observer.observe(vouchersSection);
+    }
+
+    return () => observer.disconnect();
+  }, [vouchersVisible]);
 
   const scrollToVouchers = () => {
     document.getElementById('vouchers')?.scrollIntoView({ 
@@ -153,11 +174,16 @@ export default function Home() {
             Select the perfect gift voucher below. Each purchase includes instant delivery and a personalised code ready to use.
           </p>
         <div className="grid grid-cols-2 gap-4 md:gap-8">
-          {vouchers.map((voucher) => (
+          {vouchers.map((voucher, index) => (
             <a
               key={voucher.id}
               href={voucher.url}
-              className="relative shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer block rounded-xl md:rounded-2xl overflow-hidden"
+              className={`relative shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer block rounded-xl md:rounded-2xl overflow-hidden ${
+                vouchersVisible ? 'animate-bounce-in' : 'opacity-0'
+              }`}
+              style={{
+                animationDelay: vouchersVisible ? `${index * 100}ms` : '0ms'
+              }}
             >
               <Image
                 src={voucher.image}
