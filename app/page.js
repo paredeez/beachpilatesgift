@@ -12,32 +12,32 @@ const heroImages = [
 const vouchers = [
   {
     id: 1,
-    image: '/images/giftvouchers/1.png',
+    image: '/images/giftvouchers/2.png',
     url: 'https://buy.stripe.com/14A14n45k6WVbe91hM9AA03',
   },
   {
     id: 2,
-    image: '/images/giftvouchers/2.png',
+    image: '/images/giftvouchers/3.png',
     url: 'https://buy.stripe.com/6oUaEXatI3KJfupgcG9AA04',
   },
   {
     id: 3,
-    image: '/images/giftvouchers/3.png',
+    image: '/images/giftvouchers/4.png',
     url: 'https://buy.stripe.com/4gM6oH1Xc3KJbe9d0u9AA05',
   },
   {
     id: 4,
-    image: '/images/giftvouchers/4.png',
+    image: '/images/giftvouchers/5.png',
     url: 'https://buy.stripe.com/9B65kDgS6epndmh3pU9AA06',
   },
   {
     id: 5,
-    image: '/images/giftvouchers/5.png',
+    image: '/images/giftvouchers/6.png',
     url: 'https://buy.stripe.com/3cI8wPfO20yx6XTf8C9AA07',
   },
   {
     id: 6,
-    image: '/images/giftvouchers/6.png',
+    image: '/images/giftvouchers/7.png',
     url: 'https://buy.stripe.com/fZu3cv0T82GF9619Oi9AA08',
   },
 ];
@@ -108,8 +108,11 @@ export default function Home() {
           <p className="text-base md:text-lg lg:text-xl text-gray-700 text-center max-w-2xl mb-3 md:mb-4 px-2">
             Give the gift of wellness and movement by the beach
           </p>
+          <p className="text-sm md:text-base text-gray-600 text-center max-w-xl mb-3 md:mb-4 px-2">
+            Perfect for birthdays, Christmas or a "thinking of you" moment. They get a personalised code, instant email delivery and can book any of my classes that suit them.
+          </p>
           <p className="text-sm md:text-base text-gray-600 text-center max-w-xl mb-6 md:mb-8 px-2">
-            Perfect for friends, family, or yourself. Choose from single classes to multi-class packages.
+            Choose from single classes to multi-class packages.
           </p>
           <button
             onClick={scrollToVouchers}
@@ -137,9 +140,12 @@ export default function Home() {
       {/* Vouchers Grid */}
       <div id="vouchers" className="bg-sage-dark py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-light text-center mb-12 text-white">
+          <h2 className="text-4xl md:text-5xl font-light text-center mb-4 text-white">
             Choose Your Package
           </h2>
+          <p className="text-base md:text-lg text-white/90 text-center max-w-2xl mx-auto mb-12 px-2">
+            Select the perfect gift voucher below. Each purchase includes instant delivery and a personalised code ready to use.
+          </p>
         <div className="grid grid-cols-2 gap-4 md:gap-8">
           {vouchers.map((voucher) => (
             <a
